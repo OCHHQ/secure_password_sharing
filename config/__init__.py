@@ -1,3 +1,4 @@
+# app/config.py
 import os
 import secrets
 from dotenv import load_dotenv
@@ -55,14 +56,16 @@ class TestingConfig(Config):
     SESSION_COOKIE_SECURE = False  # No secure cookies in testing environments
 
 
-def get_config():
+def get_config(config_name):
     """
-    Dynamically select configuration based on environment.
+    Dynamically select configuration based on the provided environment name.
+
+    Args:
+        config_name (str): The name of the configuration environment (e.g., 'development', 'production').
 
     Returns:
         Config: Configuration class
     """
-    config_name = os.getenv('FLASK_ENV', 'development')
     config_mapping = {
         'development': DevelopmentConfig,
         'production': ProductionConfig,
