@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from 'react-router-dom';
 
 function Login() {
@@ -18,11 +18,11 @@ function Login() {
   };
 
   return (
-    <div className="border-4 rounded-3xl w-3/4 shadow-2xl mx-auto my-20 px-20 py-20 lg:w-1/2">
+    <div className="border-4 w-3/4 rounded-3xl  shadow-2xl mx-auto my-20 p-10 lg:p-20 lg:w-1/2">
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col gap-4 mb-3">
-          <h3 className="text-2xl sm:text-4xl lg:text-5xl font-semibold">Welcome Back</h3>
-          <p className=" text-md font-medium lg:text-lg text-gray-500">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-center">Welcome Back</h3>
+          <p className=" text-sm text-center font-medium lg:text-lg text-gray-500 mb-3">
             Welcome back! Please enter your details
           </p>
         </div>
@@ -39,7 +39,7 @@ function Login() {
               onChange={handleChange}
               required
               placeholder="Enter your Email"
-              className="border-2 p-4 rounded-xl w-full border-gray-100 bg-transparent hover:border-gray-200"
+              className="border-2 p-4 rounded-xl w-full border-gray-100 bg-transparent hover:border-gray-200 active:scale-[0.98]"
             />
           </div>
           <div className="flex flex-col gap-2">
@@ -54,11 +54,11 @@ function Login() {
               onChange={handleChange}
               required
               placeholder="Enter your password"
-              className="border-2 p-4 rounded-xl w-full border-gray-100 bg-transparent hover:border-gray-200"
+              className="border-2 p-4 rounded-xl w-full border-gray-100 bg-transparent hover:border-gray-200 active:scale-[0.98]"
             />
           </div>
-          <div className="flex flex-col lg:flex-row justify-between lg:items-center mt-2">
-            <label className="flex items-center text-base font-medium">
+          <div className="flex lg:flex-row justify-between lg:items-center mt-2">
+            <label className="flex items-center text-base font-medium active:scale-[0.98]">
               <input
                 type="checkbox"
                 id="rememberMe"
