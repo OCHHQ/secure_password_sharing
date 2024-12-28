@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import { authAPI } from "../../config/api"; // Adjust according to your API file
+// Adjust according to your API file
+import authAPI from '../api/api';
 
 function Signup() {
   const navigate = useNavigate();
